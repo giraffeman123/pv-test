@@ -12,6 +12,8 @@ spec:
         mountPath: /var/nfs
       command: ["/bin/sh"]
       args: ["-c", "sleep 500000"]
+  nodeSelector:
+    env: prod   
   volumes:
   - name: data
     persistentVolumeClaim:
